@@ -7,6 +7,7 @@ const {
   MONGO_PORT,
 } = require('./config/config');
 const postRouter = require('./routes/postRoutes');
+const userRouter = require('./routes/userRoutes');
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/v1/posts', postRouter);
+app.use('/api/v1/users', userRouter);
 
 const PORT = process.env.PORT || 3000;
 
