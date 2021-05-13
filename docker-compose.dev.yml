@@ -12,7 +12,9 @@ services:
       - NODE_ENV=development
       - MONGO_USER=lukasz_kalemba
       - MONGO_PASSWORD=123456
+      - SESSION_SECRET=secret
     command: npm run dev
+
   mongo:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=lukasz_kalemba
